@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World!</title>
+    </head>
+    <body>
 
+        <h1>Hello World!</h1>
 
-  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-  <script src="https://api.trello.com/1/client.js?key=b9ba7c2037190da4db4bc8ee0d643164"></script>
-  <script src="js/index.js"></script>
-  <script type="text/javascript">
-  Trello.authorize({
-    type: "popup",
-    name: "Toptask",
-    scope: {
-      read: true,
-      write: false
-    },
-    expiration: "never",
-    success: function() { console.log("Successful authentication"); },
-    error: function() { console.log("Failed authentication"); }
-  });
-</script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://api.trello.com/1/client.js?key=b9ba7c2037190da4db4bc8ee0d643164"></script>
+        <script src="app/js/index.js"></script>
 
-  </body>
+    </body>
 </html>
