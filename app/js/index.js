@@ -1,8 +1,3 @@
-// var electronCookies = require('electron-cookies');
-
-console.log("index.js")
-console.log(Trello);
-
 Trello.authorize({
     type: "redirect",
     name: "Toptask",
