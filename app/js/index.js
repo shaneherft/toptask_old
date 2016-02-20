@@ -3,6 +3,9 @@ var onAuthorize = function() {
     $('.icons').hide();
     $("#output").empty();
 
+    // var cardID = prompt("Enter card ID");
+    // console.log(cardID);
+
     Trello.members.get(("me"), function(member){
         $("#fullName").text(member.fullName);
 
@@ -22,15 +25,23 @@ var onAuthorize = function() {
                 .text(card.name)
                 .appendTo($cards);
 
+                var linkURL = card.url
+                console.log(linkURL);
+
                 $(".toggle").click(function(event) {
                 event.preventDefault();
                 $("div.overlay").fadeToggle("fast");
+
                 });
 
-                $(".toggle").mouseover(function() {
-                $('.icons').show();
-                });
-
+                $(".toggle")
+                .mouseover(function() {
+                  $('.icons').show();
+                  // $('.icons a').attr({href, linkURL});
+                    })
+                .mouseout(function() {
+                  $('.icons').hide();
+                    });
 
 
                 //Displays correct color label

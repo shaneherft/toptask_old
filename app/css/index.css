@@ -16,6 +16,7 @@ body {
     font-size: 14px;
     background-color: #e2e4e6;
      -webkit-app-region: drag;
+    cursor: move;
 
 }
 
@@ -98,7 +99,7 @@ a {
     height: 100%;
     display:block;
     text-decoration:none;
-    z-index:99999;
+    z-index:9998;
     outline:none;
 }
 
@@ -112,10 +113,10 @@ a {
 }
 
 .icons {
-  visibility: hidden;
   float: right;
   padding-right: 20px;
   padding-top: 13px;
+  z-index: 9999;
 }
 
 .tick {
@@ -124,6 +125,7 @@ a {
   height: 30px;
   margin: 0 10px auto;
   background-image: url('../images/tick.png');
+  cursor: pointer;
 }
 
 .trello {
@@ -132,4 +134,5 @@ a {
   height: 30px;
   margin: 0 auto;
   background-image: url('../images/trello.png');
+  cursor: pointer;
 }
