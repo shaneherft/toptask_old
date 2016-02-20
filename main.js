@@ -11,19 +11,23 @@ function createWindow () {
 
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 270,
+        height: 58,
+        frame: false,
+        alwaysOnTop: true,
         webPreferences: {
-            "node-integration": false
+            "node-integration": false,
         }
     });
 
+    mainWindow.webContents.clearHistory();
     // and load the index.html of the app.
     mainWindow.loadURL('http://localhost:8000');
 
 
+
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function() {
@@ -33,7 +37,7 @@ function createWindow () {
         mainWindow = null;
     });
 }
-
+//
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', createWindow);
